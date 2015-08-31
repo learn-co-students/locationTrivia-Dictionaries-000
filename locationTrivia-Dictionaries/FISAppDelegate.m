@@ -16,10 +16,53 @@
     return YES;
 }
 
-/** 
- 
- *  Write your method implementations here.
- 
- */
+//empireState = @{ @"name"      : empireStateName,
+//                 @"latitude"  : @(empireStateLat) ,
+//                 @"longitude" : @(empireStateLng)
+//                 };
+
+-(NSString *)stringByTruncatingNameOfLocation:(NSDictionary*) location toLength:(NSUInteger) length{
+    if (length <= [location[@"name"] length]){
+        NSString *shortenedName = [location[@"name"] substringToIndex:length];
+        return shortenedName;
+    } else {
+        return location[@"name"];
+    }
+        
+}
+
+-(NSDictionary*)dictionaryForLocationWithName:(NSString *) name latitude:(CGFloat) latitude longitude:(CGFloat) longitude{
+    NSDictionary *location = @{  @"name"  : name,
+                                @"latitude" : @(latitude),
+                                @"longitude" : @(longitude) };
+    return location;
+}
+
+-(NSArray *)namesOfLocations:(NSArray *) locations{
+    NSMutableArray *nameArray = [@[] mutableCopy];
+    for (NSDictionary *location in locations) {
+        [nameArray addObject:location[@"name"]];
+    }
+    return nameArray;
+}
+
+-(BOOL)dictionaryIsValidLocation:(NSDictionary *) location{
+    if ([location count] == 3 && [[location allKeys] containsObject:@"name"] && [[location allKeys] containsObject:@"latitude"] && [[location allKeys] containsObject:@"longitude"]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+-(NSDictionary *)locationNamed:(NSString *) name inLocations:(NSArray *) locations{
+    for (NSDictionary *location in locations) {
+        if ([location[@"name"] isEqualToString:name]){
+            return location;
+        }
+
+    }
+    return nil;
+}
+
 
 @end

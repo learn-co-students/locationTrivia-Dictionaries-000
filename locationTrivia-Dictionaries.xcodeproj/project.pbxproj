@@ -438,11 +438,7 @@
 			baseConfigurationReference = 197FC7E2975C50D3BA57515C /* Pods-locationTrivia-DictionariesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/locationTrivia-Dictionaries.app/locationTrivia-Dictionaries";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "locationTrivia-Dictionaries/locationTrivia-Dictionaries-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -462,11 +458,7 @@
 			baseConfigurationReference = F9ED56753699E2F0E095CAA3 /* Pods-locationTrivia-DictionariesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/locationTrivia-Dictionaries.app/locationTrivia-Dictionaries";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "locationTrivia-Dictionaries/locationTrivia-Dictionaries-Prefix.pch";
 				INFOPLIST_FILE = "locationTrivia-DictionariesTests/locationTrivia-DictionariesTests-Info.plist";
